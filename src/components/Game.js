@@ -28,10 +28,12 @@ export default function Game() {
     const handleSubmit = evt => {
         const suggested = word.toLowerCase()
         const acceptablewords = (wordlistarray[0].concat(wordlistarray[1])).concat(wordlistarray[2])
+       // const acceptablewords1 = wordlistarray.map(list => list.map(word =>(word)))
         //
         evt.preventDefault()
         //check if suggested word has already been added to the list
-        
+        console.log(`acceptablewords ${acceptablewords}`)
+        //console.log(`acceptablewords1 ${acceptablewords1}`)
         if (correctlyGuessed.includes(suggested.toUpperCase())) {
             console.log("Word already guessed!")
         }
